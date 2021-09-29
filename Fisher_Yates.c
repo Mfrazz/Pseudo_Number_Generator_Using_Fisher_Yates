@@ -55,9 +55,17 @@ int main()
         vector_add(&num_vec, i);
     }
     randomize (num_vec);
+    // Print vector with the first group of added ints
+    printVector(num_vec);
+    // Add another few integers to the created vector
+    for (int i = 0; i<=SIZE; i++) {
+        vector_add(&num_vec, i);
+    }
+    randomize (num_vec);
+    // Print vector with the second group of added ints
     printVector(num_vec);
     // You have to free the vector from memory.
-    vector_free(num_vec)
+    vector_free(num_vec);
  
     return 0;
 }
