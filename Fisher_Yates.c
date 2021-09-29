@@ -1,5 +1,5 @@
 // C Program to shuffle a given vector
-// Vector code from https://github.com/Mashpoe/c-vector
+// Vec.h from https://github.com/Mashpoe/c-vector
 // compile with the command gcc Fisher_Yates.c vec.c -o Fisher_Yates
  
 #include <stdio.h>
@@ -56,6 +56,8 @@ int main()
     }
     randomize (num_vec);
     printVector(num_vec);
+    // You have to free the vector from memory.
+    vector_free(num_vec)
  
     return 0;
 }
