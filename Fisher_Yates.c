@@ -7,6 +7,8 @@
 #include <time.h>
 #include "vec.h"
 
+#define SIZE 10
+
 // A utility function to swap to integers
 void swap (int *a, int *b)
 {
@@ -49,7 +51,7 @@ void randomize ( int vec[])
 int main()
 {
     int* num_vec = vector_create();
-    for (int i = 0; i<=10; i++) {
+    for (int i = 0; i<=SIZE; i++) {
         vector_add(&num_vec, i);
     }
     randomize (num_vec);
