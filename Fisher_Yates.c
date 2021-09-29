@@ -52,7 +52,6 @@ int main()
     for (int i = 0; i<=10; i++) {
         vector_add(&num_vec, i);
     }
-    //int n = sizeof(vec)/ sizeof(vec[0]);
     randomize (num_vec);
     printVector(num_vec);
  
