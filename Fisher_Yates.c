@@ -1,10 +1,12 @@
-// C Program to shuffle a given array
+// C Program to shuffle a given vector
+// Vector code from https://github.com/Mashpoe/c-vector
+// compile with the command gcc Fisher_Yates.c vec.c -o Fisher_Yates
  
 #include <stdio.h>
 #include <stdlib.h>
 #include <time.h>
 #include "vec.h"
- 
+
 // A utility function to swap to integers
 void swap (int *a, int *b)
 {
@@ -12,18 +14,21 @@ void swap (int *a, int *b)
     *a = *b;
     *b = temp;
 }
- 
-// A utility function to print an array
-void printArray (int arr[], int n)
+
+// A utility function to print a vector
+void printVector (int vec[])
 {
+    int n = vector_size(vec);
     for (int i = 0; i < n; i++)
-        printf("%d ", arr[i]);
+        printf("%d ", vec[i]);
     printf("\n");
 }
- 
-// A function to generate a random permutation of arr[]
-void randomize ( int arr[], int n )
-{
+
+ // A function to generate a random permutation of a vector
+void randomize ( int vec[])
+{   
+    int n = vector_size(vec);
+
     // Use a different seed value so that we don't get same
     // result each time we run this program
     srand ( time(NULL) );
@@ -35,18 +40,21 @@ void randomize ( int arr[], int n )
         // Pick a random index from 0 to i
         int j = rand() % (i+1);
  
-        // Swap arr[i] with the element at random index
-        swap(&arr[i], &arr[j]);
+        // Swap vec[i] with the element at random index
+        swap(&vec[i], &vec[j]);
     }
 }
- 
+
 // Driver program to test above function.
 int main()
 {
-    int arr[] = {1, 2, 3, 4, 5, 6, 7, 8};
-    int n = sizeof(arr)/ sizeof(arr[0]);
-    randomize (arr, n);
-    printArray(arr, n);
+    int* num_vec = vector_create();
+    for (int i = 0; i<=10; i++) {
+        vector_add(&num_vec, i);
+    }
+    //int n = sizeof(vec)/ sizeof(vec[0]);
+    randomize (num_vec);
+    printVector(num_vec);
  
     return 0;
 }
