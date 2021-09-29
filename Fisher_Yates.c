@@ -3,7 +3,7 @@
 #include <stdio.h>
 #include <stdlib.h>
 #include <time.h>
-#include <vec.h>
+#include "vec.h"
  
 // A utility function to swap to integers
 void swap (int *a, int *b)
