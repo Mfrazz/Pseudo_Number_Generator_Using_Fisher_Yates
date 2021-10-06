@@ -18,6 +18,7 @@ arr = []
 for i in range(3):
     arr.append(i)
 
+#for now using itertools, may be a faster way since itertools takes N time and checking all permutations takes (N - 1)! time.
 arrPermutations = list(itertools.permutations(arr))
 size = len(arrPermutations)
 while len(arrPermutations) > 1:
