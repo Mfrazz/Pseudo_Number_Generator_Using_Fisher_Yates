@@ -9,7 +9,7 @@
 
 #define SIZE 10
 
-// A utility function to swap to integers
+// A utility function to swap two integers
 void swap (int *a, int *b)
 {
     int temp = *a;

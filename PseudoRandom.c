@@ -8,7 +8,7 @@
 
 #define SIZE 10
 
-// A utility function to swap to integers
+// A utility function to swap two integers
 void swap (int *a, int *b)
 {
     int temp = *a;
@@ -42,7 +42,7 @@ int checkIfCommutable(int vec1[], int vec2[]) {
 
     for (int i = 1; i <= n; i++) {
         if (vec2[vec1[i]] == vec1[vec2[i]]) {
-            ;
+            ; // effectively passes
         }
         else {
             return 1;
