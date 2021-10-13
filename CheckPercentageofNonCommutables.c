@@ -61,10 +61,9 @@ int permute(int vec[], int start, int end) {
 // Driver program to test above functions.
 int main() {
 int* num_vec = vector_create();
-    for (int i = 0; i<=SIZE; i++) {
+    for (int i = 1; i<=SIZE; i++) {
         vector_add(&num_vec, i);
     }
-
     int n = vector_size(num_vec);
     permute(num_vec, 0, n-1);
     //printVector(num_vec);
