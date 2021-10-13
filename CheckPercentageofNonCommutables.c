@@ -35,9 +35,9 @@ int checkIfCommutable(int vec1[], int vec2[]) {
             ; // effectively passes
         }
         else {
-            return 1;
+            return 0;
         }
-    return 0;
+    return 1;
     }
 }
 
